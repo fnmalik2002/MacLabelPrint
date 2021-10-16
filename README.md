@@ -54,4 +54,6 @@ label_data = {
 }
 
 ```
+ ## IMPORTANT
  
+ Make sure if you set label sizes to be width=400 and height=600 then in your printer settings page (using Safari on localhost:631) change defaults to paper size 4.00 x 6.00
