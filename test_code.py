@@ -6,10 +6,10 @@
 ##
 ## PLEASE DO *NOT* EDIT THIS FILE!
 ###########################################################################
-import math
 
-import print_labels as pl
+import MacLabelPrint as pl
 import wx
+
 #
 # ###########################################################################
 # ## Class MyPrint
