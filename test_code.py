@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
+
 ###########################################################################
 ## Python code generated with wxFormBuilder (version 3.9.0 Feb 26 2020)
 ## http://www.wxformbuilder.org/
@@ -7,7 +8,11 @@
 ## PLEASE DO *NOT* EDIT THIS FILE!
 ###########################################################################
 
+<<<<<<< Updated upstream
 import MacLabelPrint as pl
+=======
+from print_labels import MyLabel as pl
+>>>>>>> Stashed changes
 import wx
 
 #
@@ -22,7 +27,7 @@ class MyLabel(wx.Frame):
 
     def __init__(self, parent):
 
-        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title="Label Creater", pos=wx.DefaultPosition,
+        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title="Label Creator", pos=wx.DefaultPosition,
                           size=wx.Size(400, 400), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
@@ -89,21 +94,21 @@ class MyLabel(wx.Frame):
 
     def make_label(self, event):
 
-        label_width = 450
-        label_height = 200
+        label_width = 500
+        label_height = 500
 
-        # format is, lines: label to print, lbl_x, lbl_y, font_size, font_weight
-        label_lines = {
-            "ln1" : [ "+",15,15,30,wx.FONTWEIGHT_NORMAL],
-            "l1": ["Line 1 at x=60 y=20 font=20 Bold", 60, 25, 20, wx.FONTWEIGHT_BOLD],
-            "l2": ["line 2 at x=160 y=60 font=16 Normal", 60, 60, 16, wx.FONTWEIGHT_NORMAL],
-            "l3": ["Line 3 at x=20 y=100 font=10 Normal", 20, 100, 10, wx.FONTWEIGHT_NORMAL],
-            "l4": ["Line 4 at x=20 y=120 font=8 Normal", 20, 120, 8, wx.FONTWEIGHT_NORMAL],
-            "l5": ["Line 4 at x=20 y=160 font=12 Normal", 20, 160, 12, wx.FONTWEIGHT_NORMAL],
+        # format is, lines: label text to print, lbl_x, lbl_y, font_size, font_weight
+        label_data = {
+            "l1":["+",15,15,30,wx.FONTWEIGHT_NORMAL],
+            "l2": ["Line 1 at x=60 y=20 font=18 Bold", 60, 25, 18, 100],
+            "l3": ["line 2 at x=160 y=60 font=16 Normal", 60, 60, 16, wx.FONTWEIGHT_NORMAL],
+            "l4": ["Line 3 at x=20 y=100 font=10 Normal", 20, 100, 10, wx.FONTWEIGHT_NORMAL],
+            "l5": ["Line 4 at x=20 y=120 font=8 Normal", 20, 120, 8, wx.FONTWEIGHT_NORMAL],
+            "l6": ["Line 5 at x=20 y=160 font=12 Normal", 20, 160, 12, wx.FONTWEIGHT_NORMAL],
         }
 
-        pl.MyLabel(None, label_lines, label_width, label_height)
-        pl.MyLabel(None)
+        pl(None, label_data, label_width, label_height)
+        # pl(None, label_data)
 
 
 if __name__ == '__main__':

@@ -20,12 +20,11 @@ import subprocess
 
 class MyLabel(wx.Frame):
 
-    def __init__(self, parent, line={"lin1": ["Default Label", 150, 85, 16, wx.FONTWEIGHT_NORMAL]},lbl_w=400, lbl_h=200, ln1_x=20, ln1_y=10):
-        self.__lbl_w = lbl_w
-        self.__lbl_h = lbl_h
-        self.__ln_x = ln1_x
-        self.__ln_y = ln1_y
-        self.__line = line
+    def __init__(self, parent, data, lbl_width=400, lbl_height=200):
+
+        self.__lbl_w = lbl_width
+        self.__lbl_h = lbl_height
+        self.__label_data = data # label data is a dictionary with each key value represents a single line to print on label
 
         wx.Frame.__init__(self, parent, id=wx.ID_ANY, title="Label", pos=wx.DefaultPosition,
                           size=wx.Size(self.__lbl_w + 100, self.__lbl_h + 100), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
@@ -105,9 +104,9 @@ class MyLabel(wx.Frame):
 
 
     def __add_lines(self):
-        for i in self.__line.keys():
-            dc.SetFont(wx.Font(self.__line[i][3], wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, self.__line[i][4], False))
-            dc.DrawText(self.__line[i][0], self.__line[i][1], self.__line[i][2])
+        for i in self.__label_data.keys():
+            dc.SetFont(wx.Font(self.__label_data[i][3], wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, self.__label_data[i][4], False))
+            dc.DrawText(self.__label_data[i][0], self.__label_data[i][1], self.__label_data[i][2])
 
 
     def __on_print(self, event):
@@ -115,7 +114,7 @@ class MyLabel(wx.Frame):
         #take a screenshot of the label area
         pos_x, pos_y = self.m_panel4.GetScreenPosition()
         w, h = self.m_panel4.GetSize()
-        print("Label location : ", self.m_panel4.GetScreenPosition(), "    |    Label Size : ", self.m_panel4.GetSize())
+        # print("Label location : ", self.m_panel4.GetScreenPosition(), "    |    Label Size : ", self.m_panel4.GetSize())
         box = pos_x, pos_y, w, h
         wx.Yield()
         im = pyscreeze.screenshot(region=(box))
