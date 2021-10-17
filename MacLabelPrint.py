@@ -14,10 +14,6 @@ import pyscreeze as pyscreeze
 import subprocess
 
 
-###########################################################################
-## Class MyPrint
-###########################################################################
-
 class MyLabel(wx.Frame):
 
     def __init__(self, parent, data, lbl_width=400, lbl_height=200):
@@ -26,7 +22,7 @@ class MyLabel(wx.Frame):
         self.__lbl_h = lbl_height
         self.__label_data = data # label data is a dictionary with each key value represents a single line to print on label
 
-        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title="Label", pos=wx.DefaultPosition,
+        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title="Label Size {}{}{}".format(self.__lbl_w, "x", self.__lbl_h), pos=wx.DefaultPosition,
                           size=wx.Size(self.__lbl_w + 100, self.__lbl_h + 100), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
 
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
