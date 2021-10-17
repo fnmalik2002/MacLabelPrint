@@ -83,6 +83,8 @@ class MyLabel(wx.Frame):
 
         self.Layout()
 
+        # CallLater will wait 100ms before executing create_label command.
+        # This will allow to fully create gui and hence wx.deviceDC before entering text to it
         wx.CallLater(100, self.__create_labels)
 
         self.Centre(wx.BOTH)

@@ -1,12 +1,14 @@
 # MacLabelPrint
-Create a formatted label and print it using MacOS and Python 3. You can control label size, text size, text location on label and text weight using this module.
-The newly constructed modules will be displayed on your screen alongwith a print button which will print the label to your Mac's default printer without opening   printer options dialogue box.
+
+---
+Create a formatted label and print it on macOS and Python 3. You can control label size, text size, text location on label and text weight using this module.
+The newly constructed modules will be displayed on your screen alongside a print button which will print the label to your Mac's default printer without opening   printer options dialogue box.
 
  Call this label creator from inside your python code.
  
- You can put the label conbstructor code inside a button click method in you python gui app.
+ You can put the label constructor code inside a button click method in your python gui app.
  
-## Import and contstruct label object to print
+## Import and construct label object to print
 
 ### Method 1
 ```

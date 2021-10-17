@@ -92,7 +92,7 @@ class MyLabel(wx.Frame):
     def make_label(self, event):
 
         label_width = 400
-        label_height = 400
+        label_height = 200
 
         # format is, lines: label text to print, lbl_x, lbl_y, font_size, font_weight
         label_data = {
@@ -109,7 +109,7 @@ class MyLabel(wx.Frame):
 
 
 if __name__ == '__main__':
-    app = wx.App(False)
+    app = wx.App()
     frame = MyLabel(None)
     app.MainLoop()
 
