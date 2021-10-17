@@ -8,11 +8,8 @@
 ## PLEASE DO *NOT* EDIT THIS FILE!
 ###########################################################################
 
-<<<<<<< Updated upstream
-import MacLabelPrint as pl
-=======
-from print_labels import MyLabel as pl
->>>>>>> Stashed changes
+
+from MacLabelPrint import MyLabel as pl
 import wx
 
 #
@@ -94,8 +91,8 @@ class MyLabel(wx.Frame):
 
     def make_label(self, event):
 
-        label_width = 500
-        label_height = 500
+        label_width = 400
+        label_height = 400
 
         # format is, lines: label text to print, lbl_x, lbl_y, font_size, font_weight
         label_data = {
