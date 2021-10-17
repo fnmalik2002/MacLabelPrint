@@ -97,8 +97,8 @@ class MyLabel(wx.Frame):
         # format is, lines: label text to print, lbl_x, lbl_y, font_size, font_weight
         label_data = {
             "l1":["+",15,15,30,wx.FONTWEIGHT_NORMAL],
-            "l2": ["Line 1 at x=60 y=20 font=18 Bold", 60, 25, 18, 100],
-            "l3": ["line 2 at x=160 y=60 font=16 Normal", 60, 60, 16, wx.FONTWEIGHT_NORMAL],
+            "l2": ["Line 1 at x=60 y=20 font=18 Bold", 60, 25, 18, 700],
+            "l3": ["line 2 at x=60 y=60 font=16 Normal", 60, 60, 16, wx.FONTWEIGHT_NORMAL],
             "l4": ["Line 3 at x=20 y=100 font=10 Normal", 20, 100, 10, wx.FONTWEIGHT_NORMAL],
             "l5": ["Line 4 at x=20 y=120 font=8 Normal", 20, 120, 8, wx.FONTWEIGHT_NORMAL],
             "l6": ["Line 5 at x=20 y=160 font=12 Normal", 20, 160, 12, wx.FONTWEIGHT_NORMAL],
