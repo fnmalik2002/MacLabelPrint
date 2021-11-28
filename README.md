@@ -8,6 +8,8 @@ The newly constructed modules will be displayed on your screen alongside a print
  
  You can put the label constructor code inside a button click method in your python gui app.
  
+ Take a look at test_code.py file. This file is included to show how to import and use the MacLabelPrint.py module inside your code.
+ 
 ## Import and construct label object to print
 
 ### Method 1
